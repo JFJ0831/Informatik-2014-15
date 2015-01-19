@@ -12,7 +12,7 @@ public class PalindromPruefer {
 	 *         ist, <CODE>false</CODE> sonst.
 	 */
 	public boolean istPalindrom(String eingabe) {
-
+		
 		boolean ausgabe = true;									// Es wird von einem Palindrom ausgegangen.
 		
 		if(eingabe == null) {									// Für eine null Eingabe wird die
