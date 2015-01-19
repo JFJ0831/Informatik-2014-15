@@ -3,8 +3,14 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
+/**
+ * The Class PalindromPrueferTest.
+ */
 public class PalindromPrueferTest {
 
+	/**
+	 * Test ist palindrom.
+	 */
 	@Test
 	public void testIstPalindrom() {
 		// Erzeuge ein Objekt zum Testen.
@@ -84,6 +90,9 @@ public class PalindromPrueferTest {
 
 	}
 
+	/**
+	 * Test ist satz palindrom.
+	 */
 	@Test
 	public void testIstSatzPalindrom() {
 		// Erzeuge ein Objekt zum Testen.

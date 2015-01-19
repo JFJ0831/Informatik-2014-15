@@ -1,5 +1,8 @@
 /**
  * Ueberpruefung der Eigenschaft, ein Palindrom zu sein.
+ *
+ * @version 1.2
+ * @autor Boyz
  */
 public class PalindromPruefer {
 
