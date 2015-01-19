@@ -1,10 +1,10 @@
 /**
- * &Uuml;berpr&uuml;fung der Eigenschaft, ein Palindrom zu sein.
+ * Ueberpruefung der Eigenschaft, ein Palindrom zu sein.
  */
 public class PalindromPruefer {
 
 	/**
-	 * &Uuml;berpr&uuml;fe, ob die &uuml;bergebene Zeichenkette
+	 * Ueberpruefe, ob die uebergebene Zeichenkette
 	 * ein Palindrom ist. Hierbei soll nicht zwischen Gross- und
 	 * Kleinbuchstaben unterschieden werden.
 	 * @param eingabe Zu testende Zeichenkette.
@@ -13,17 +13,29 @@ public class PalindromPruefer {
 	 */
 	public boolean istPalindrom(String eingabe) {
 
-		boolean ausgabe = false;
+		boolean ausgabe = true;
 		
-		/*
-		 * Hier Programmtext ergaenzen.
-		 */
-
+		if(eingabe == null) {
+			ausgabe = false;
+			return ausgabe;
+		}
+		if(eingabe == "") {
+			return ausgabe;
+		}	
+		for(int a=0,e=eingabe.length()-1; a<e; a++,e--) {
+			eingabe = eingabe.toLowerCase();
+			if(eingabe.charAt(a)!=eingabe.charAt(e)) {
+                ausgabe = false;
+            	return ausgabe;
+            }
+        }
+		
 		return ausgabe;
+		
 	}
 
 	/**
-	 * &Uuml;berpr&uuml;fe, ob die &uuml;bergebene Zeichenkette
+	 * Ueberpruefe, ob die uebergebene Zeichenkette
 	 * ein Satzpalindrom ist. Hierbei soll nicht zwischen Gross- und
 	 * Kleinbuchstaben unterschieden werden.
 	 * @param eingabe Zu testende Zeichenkette.
@@ -32,12 +44,27 @@ public class PalindromPruefer {
 	 */
 	public boolean istSatzPalindrom(String eingabe) {
 
-		boolean ausgabe = false;
+boolean ausgabe = true;
 		
-		/*
-		 * Hier Programmtext ergaenzen.
-		 */
-
+		if(eingabe == null) {
+			ausgabe = false;
+			return ausgabe;
+		}
+		eingabe = eingabe.toLowerCase();
+		eingabe = eingabe.replace(" ", "");
+		eingabe = eingabe.replace(",", "");
+		eingabe = eingabe.replace(".", "");
+		eingabe = eingabe.replace("!", "");
+		eingabe = eingabe.replace("?", "");
+		eingabe = eingabe.replace(":", "");
+		eingabe = eingabe.replace(";", "");
+		for(int a=0,e=eingabe.length()-1; a<e; a++,e--) {
+			if(eingabe.charAt(a)!=eingabe.charAt(e)) {
+                ausgabe = false;
+            	return ausgabe;
+            }
+        }
+		
 		return ausgabe;
 	}
 }
