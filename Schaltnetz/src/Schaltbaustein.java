@@ -15,43 +15,36 @@ abstract public class Schaltbaustein {
 	boolean WertX;
 	boolean WertY;
 	
-	public class SchaltbausteinOR extends Schaltbaustein {
-		public SchaltbausteinOR() {
-			if (WertX == true || WertY == true)
-				ausgang = true;
-		}
-
-		@Override
-		public boolean werteAus() {
-			// TODO Auto-generated method stub
-			return false;
-		}
+	public void setEingangX(boolean WertX) {
+		// TODO Auto-generated method stub
+		
 	}
-	public class SchaltbausteinAND extends Schaltbaustein {	
-		public SchaltbausteinAND() {
-			if (WertX == true && WertY == true)
-				ausgang = true;
-		}
 
-		@Override
-		public boolean werteAus() {
-			// TODO Auto-generated method stub
-			return false;
-		}
+	public void setEingangY(boolean WertY) {
+		// TODO Auto-generated method stub
+		
 	}
-	public class SchaltbausteinNOT extends Schaltbaustein {
-		public SchaltbausteinNOT() {
-			if (WertX == false)
-				ausgang = true;
-			else {
-				ausgang = false;
-			}
-		}
-
-		@Override
-		public boolean werteAus() {
-			// TODO Auto-generated method stub
-			return false;
-		}
+	
+	public void setEingang(boolean ausgang) {
+		// TODO Auto-generated method stub
+		
 	}
+	
+	/**
+	 * Liest die Eingabe am Eingang X des Schaltnetzes.
+	 * @return WertX des Eingangs X des Schaltnetzes.
+	 */
+	public boolean getEingangX() {
+		return WertX;
+	}
+	
+	/**
+	 * Liest die Eingabe am Eingang Y des Schaltnetzes.
+	 * @return WertY des Eingangs Y des Schaltnetzes.
+	 */
+	public boolean getEingangY() {
+		return WertY;
+	}
+	
+	
 }

@@ -49,6 +49,11 @@ public class Schaltnetz {
 		return WertY;
 	}
 	
+	public boolean setAusgang(boolean ausgang) {
+		return ausgang;
+		
+	}
+	
 	/**
 	 * Wertet das Schaltnetz für die aktuell an den 
 	 * Eingängen X und Y anliegenden Booleschen Werte aus.
