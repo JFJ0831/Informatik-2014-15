@@ -1,28 +1,31 @@
-/**
- * Abstrakte Klasse zur Repraesentation einer konstanten Temperatur.
- */
-public abstract class Kelvin {
-
-	private double wert; // Temperaturwert.
+public class Kelvin extends Temperatur {
 
 	/**
-	 * Konstruktor, der die zu repraesentierende Temperatur
-	 * entgegen nimmt.
-	 * @param wert Zu repraesentierende Temperatur.
+	 * Setzt das Attribut wert.
+	 * @param wert Wert für das Attribut wert.
 	 */
 	public Kelvin(double wert) {
-		this.wert = wert;
-	}
-
-	/**
-	 * Lies die repraesentierte Temperatur aus.
-	 * @return Die repraesentierte Temperatur.
-	 */
-	public double getWert() {
-		return wert;
+		super(wert);
 	}
 	
-	/*
-	 * Hier koennen bei Bedarf noch Methoden ergaenzt werden.
+	/**
+	 * @see Temperatur#inCelsius()
 	 */
+	public Celsius inCelsius() {
+		return new Celsius(this.getWert() - 273.15);
+	}
+	
+	/**
+	 * Gibt this zurück, da nichts konvertiert werden muss.
+	 */
+	public Kelvin inKelvin() {
+		return this;
+	}
+	
+	/**
+	 * @see Temperatur#inFahrenheit()
+	 */
+	public Fahrenheit inFahrenheit() {
+		return new Fahrenheit(this.getWert() * 1.8 - 459.67);
+	}
 }
