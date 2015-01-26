@@ -1,4 +1,4 @@
-public class SchaltbausteinOR extends Schaltbaustein {
+public class SchaltbausteinOR extends Schaltbaustein {	
 	
 	public SchaltbausteinOR() {
 		
@@ -6,10 +6,10 @@ public class SchaltbausteinOR extends Schaltbaustein {
 
 	@Override
 	public boolean werteAus() {
-		this.WertX = getEingangX();
-		this.WertY = getEingangY();
-		if (WertX == true || WertY == true)
-			ausgang = true;
-		return ausgang;
+		if (getEingangX() == true || getEingangY() == true)
+			return true;
+		else {
+			return false;
+		}
 	}
-}
+}		
