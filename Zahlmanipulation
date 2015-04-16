@@ -1,0 +1,35 @@
+/**
+ * 
+ * @author boyz
+ * Hilfsklasse zur manipulation von Zahlen
+ * 
+ */
+public class Zahlmanipulation {
+	public static int berechneQuersumme(long eingabe) {
+		int ausgabe=0;
+		while(eingabe>0){
+			ausgabe = (int) (ausgabe + eingabe%10);
+			eingabe = eingabe/10;
+		}
+		return ausgabe;
+			
+	}
+	
+	public static int berechenToleranteQuersumme(String eingabe) {
+		long zwischenspeicher = 0;
+		int j = 1, i;
+		
+		for(i = 0; i < eingabe.length(); i++) {
+			if (istZahl(eingabe.charAt(i))) {
+				zwischenspeicher += ((long) eingabe.charAt(i)) * j;
+				j = j*10;
+			}
+		}
+		System.out.println(zwischenspeicher);
+		return berechneQuersumme(zwischenspeicher);
+	}
+	
+	private static boolean istZahl(char eingabe) {
+		return ("" + eingabe).matches("([0-9]){1}");
+	}
+}
