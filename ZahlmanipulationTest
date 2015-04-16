@@ -1,0 +1,27 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class ZahlmanipulationTest {
+
+	@Test
+	public void testBerechneQuersumme() {
+		assertEquals("Quersumme wurde falsch berechnet",
+				6,
+				Zahlmanipulation.berechneQuersumme(123));
+		assertEquals("Quersumme wurde falsch berechnet",
+				13,
+				Zahlmanipulation.berechneQuersumme(8023));
+	}
+
+	@Test
+	public void testBerechenToleranteQuersumme() {
+		assertEquals("Quersumme wurde falsch berechnet",
+				6,
+				Zahlmanipulation.berechenToleranteQuersumme("123"));
+		assertEquals("Quersumme wurde falsch berechnet",
+				13,
+				Zahlmanipulation.berechenToleranteQuersumme("8023"));
+	}
+}
